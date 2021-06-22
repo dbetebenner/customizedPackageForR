@@ -95,26 +95,30 @@
 <div id="overview" class="section level1">
 <h1 class="hasAnchor">
 <a href="#overview" class="anchor" aria-hidden="true"></a>Overview</h1>
-<p>The <strong>packageSkeletonForR</strong> repo contains a package skeleton suitable for quickly setting up an R package with an associated GitHub website, all hosted in your own repo on GitHub. The bulk of the work is in customizing the package (e.g., changing the name of the package to your something you want to call it). This repo attempts to guide you through the process of setting this up. Prerequisite knowlege for using this includes:</p>
+<p>The <strong>packageSkeletonForR</strong> <a href="www.github.com">GitHub</a> repository (repo, for short) contains an <a href="https://cran.r-project.org/">R</a> package skeleton suitable for more easily setting up an R package with an associated GitHub website, all hosted in your own repo on GitHub. GitHub is an ideal environment for developing, maintaining, and distributing an R package. And it's cool too!</p>
+<p>The bulk of the work is in customizing the package (e.g., changing the name of the package to something you want to call it). This repo attempts to guide you through the process of setting this up. Prerequisite knowlege for doing this (which can be figured out as part of setting this up) includes:</p>
 <ul>
 <li>Knowing the basics of GitHub including cloning a repo, making a commit to a repo, pushing changes to a repo.</li>
-<li>Knowing the basics of what an R package is. Many people don't produce R packages because they don't think they have anything worthy to put into a package. Instead of thinking about making a package that is useful for someone else, think of making a package that is useful for what you do, for example:
+<li>Knowing the basics of R and what an R package is. Many people don't create R packages because they don't think they have anything worthy to put into a package. Instead of thinking about making a package that is useful for someone else, think of making a package that is useful for yourself and what you do. For example, a package could contain:
 <ul>
 <li>Useful little data cleaning functions that may apply to data that you normally work with.</li>
-<li>Useful wrapper functions that use functions from base R and other packages that provide output in a way that you best work with.</li>
-<li>And don't be afraid to steal (with attribution, of course) other functions and put them into your package (with possible customizations). This is open source, you know!</li>
+<li>Useful wrapper functions that use functions from base R, your own work and/or other packages that provide output in a way that you best work with.</li>
+<li>Data sets that commonly reference.</li>
+<li>And don't be afraid to steal (with attribution, of course) stuff from other packages and put them into your package (with possible customizations). This is open source, you know!</li>
 </ul>
 </li>
 </ul>
 <p>The following steps are meant to help you get set up:</p>
 </div>
-<div id="step-0-make-sure-you-have-the-basics-installed" class="section level1">
+<div id="step-0-make-sure-you-have-the-basics" class="section level1">
 <h1 class="hasAnchor">
-<a href="#step-0-make-sure-you-have-the-basics-installed" class="anchor" aria-hidden="true"></a>Step 0: Make sure you have the basics installed</h1>
+<a href="#step-0-make-sure-you-have-the-basics" class="anchor" aria-hidden="true"></a>Step 0: Make sure you have the basics</h1>
 <p>You'll need to have software installed and access to GitHub to make all of this work.</p>
 <ul>
-<li>Have R &gt;= 4.0 installed.</li>
-<li>Make sure you have a GitHub account with a username and password</li>
+<li>Have R &gt;= 4.0 installed. If you use <a href="https://www.rstudio.com/">RStudio</a>, make sure to update it to the latest version.</li>
+<li>Make sure you have a GitHub account with a username and password.</li>
+<li>Update all your R packages that you have installed: <code>update.packages(ask=FALSE)</code>
+</li>
 <li>You'll need to install several R packages to make all of this work:
 <ul>
 <li>
@@ -133,7 +137,41 @@
 <div id="step-1-clone-the-github-repository" class="section level1">
 <h1 class="hasAnchor">
 <a href="#step-1-clone-the-github-repository" class="anchor" aria-hidden="true"></a>Step 1: Clone the GitHub repository</h1>
-<p>The contents of this repo need to be cloned to your local computer/device. This is done by cloning the repo. Don't fork the repo as you won't be contributing to this package skeleton but instead will be using this as a starting point to create your own R package/GitHub repo.</p>
+<p>The contents of this repo need to be cloned to your local computer/device. This is done by cloning the repo. Don't fork the repo as you won't be contributing to this package skeleton (at least I don't expect you will --- however that's OK too) but instead will be using this as a starting point to create your own customzed R package/GitHub repo that will, ideally, be quite different.</p>
+</div>
+<div id="step-2-have-fun-customizing-the-package" class="section level1">
+<h1 class="hasAnchor">
+<a href="#step-2-have-fun-customizing-the-package" class="anchor" aria-hidden="true"></a>Step 2: Have fun customizing the package</h1>
+<p>The <strong>packageSkeletonForR</strong> package is a super simple R package that contains just two functions for illustration purposes: <code>strHead</code> and <code>strTail</code>. These two functions take the first <em>n</em> characters of the head or tail of a character string (or a vector of character strings), respectively. They are the analogs of the R functions <code>head</code> and <code>tail</code> but for strings. You're welcome to keep these functions or remove them.</p>
+<p>Some things you should do:</p>
+<ul>
+<li>Change the name of the package from <code>packageSkeletonForR</code> to something you want (in these instructions we'll call is <code>myPackageName</code>). Throughout the package change any occurrence of <code>packageSkeletonForR</code> to the name you pick.</li>
+<li>Add additional functions to the package.</li>
+<li>For each new function you add, update the <code>NAMESPACE</code> (export the function) and document the function in the <code>man</code> (manual) folder. Examine the current <code>NAMESPACE</code> and <code>man</code> folder contents to see how that is done.</li>
+<li>Update the <code>NEWS.md</code> and <code>NEWS</code> files indicating changes to the package. NEWS.md is used for the static website and, ideally, will just be a copy of <code>NEWS</code>.</li>
+<li>Add a vignette to the <code>vignettes</code> folder. Use the basic vignette (<code>packageSkeletonForR.Rmd</code>) in the folder as a starter.</li>
+<li>Change the version number in <code>DESCRIPTION</code>, <code>inst/CITATION</code>, <code>man/packageSkeletonForR.Rmd</code> (last file should be named the package name you picked).</li>
+</ul>
+</div>
+<div id="step-3-compile-your-package-locally" class="section level1">
+<h1 class="hasAnchor">
+<a href="#step-3-compile-your-package-locally" class="anchor" aria-hidden="true"></a>Step 3: Compile your package locally</h1>
+<p>To make sure everything is working (be prepared to have some things not work) build your package locally. If you're using RStudio, there are functions to build the package embedded into the user interface.</p>
+</div>
+<div id="step-4-update-your-package-website" class="section level1">
+<h1 class="hasAnchor">
+<a href="#step-4-update-your-package-website" class="anchor" aria-hidden="true"></a>Step 4: Update your package website</h1>
+</div>
+<div id="step-5-push-your-package-to-github-and-set-up-github" class="section level1">
+<h1 class="hasAnchor">
+<a href="#step-5-push-your-package-to-github-and-set-up-github" class="anchor" aria-hidden="true"></a>Step 5: Push your package to GitHub and set up GitHub</h1>
+<p>You'll need to create a GitHub repo in your account for <code>myPackageName</code>.</p>
+<p>GitHub is rapidly evolving into much more than a website to do version control. For each repo, one can set up:</p>
+<ul>
+<li>A static website that can be used in many ways including documentation of the R package, demonstrating the R package capabilities,</li>
+<li>Process to build the package and test whether the build has any issues. The build processes on GitHub allow one to build against different OS platforms as well as against the current development version of R (which is required if you want to post to <a href="https://cran.r-project.org/">CRAN</a>).</li>
+</ul>
+<p>Another huge benefit of using GitHub to build your package is that you can immediately share your package with others without necessarily posting the package to CRAN. In our work we have functional development versions of the package available via GitHub and periodically post a big release version on CRAN just to keep that up-to-date.</p>
 </div>
 <div id="contributors" class="section level1">
 <h1 class="hasAnchor">
@@ -165,7 +203,7 @@
 <li><a href="https://github.com/CenterForAssessment/packageSkeletonForR/actions"><img src="https://github.com/CenterForAssessment/packageSkeletonForR/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 <li><a href="https://ci.appveyor.com/project/centerforassessment/packageSkeletonForR"><img src="https://ci.appveyor.com/api/projects/status/github/centerforassessment/packageSkeletonForR?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a></li>
 <li><a href="http://cran.r-project.org/package=packageSkeletonForR"><img src="http://www.r-pkg.org/badges/version/packageSkeletonForR" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://github.com/CenterForAssessment/packageSkeletonForR"><img src="https://img.shields.io/badge/devel-1.2--0.0-brightgreen.svg" alt="Development Version"></a></li>
+<li><a href="https://github.com/CenterForAssessment/packageSkeletonForR"><img src="https://img.shields.io/badge/devel-0.0--0.1-brightgreen.svg" alt="Development Version"></a></li>
 <li><a href="https://github.com/CenterForAssessment/packageSkeletonForR/blob/master/LICENSE.md"><img src="http://img.shields.io/badge/license-GPL%203-brightgreen.svg?style=flat" alt="License"></a></li>
 </ul>
 </div>
