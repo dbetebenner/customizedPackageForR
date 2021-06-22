@@ -1,0 +1,14 @@
+citHeader("To cite package 'packageSkeletonForR' in publications, please use:")
+
+citEntry(entry = "Manual",
+         title        = "{packageSkeletonForR}: Function for Converting Cardinal to Ordinal Numbers by Adding a Language Specific Ordinal Indicator to the Number",
+         author       = "Damian W. Betebenner",
+         year         = "2021",
+         note         = "R package version 0.0-0.1",
+         url          = "https://centerforassessment.github.io/packageSkeletonForR",
+         
+         textVersion  = paste("Damian W. Betebenner (2021).",
+                        "packageSkeletonForR: Function for Converting Cardinal to Ordinal Numbers by Adding a Language Specific Ordinal Indicator to the Number",
+                        "(R package version 0.0-0.1",
+                        "URL https://centerforassessment.github.io/packageSkeletonForR")
+)

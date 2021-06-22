@@ -1,0 +1,45 @@
+template:
+  package: centerPackageTemplate
+  default_assets: false
+
+
+home:
+  strip_header: true
+  links:
+    - text: Other Center stuff
+      href: https://centerforassessment.github.io/
+
+
+navbar:
+    title: ~
+    type: default
+    left:
+    - text: Getting Started
+      href: articles/packageSkeletonForR.html
+    - text: Reference
+      href: reference/index.html
+    - text: News
+      menu:
+      - text: "Release notes"
+      - text: "packageSkeletonForR 0.0-0.1"
+        href: articles/releases/packageSkeletonForR-0.0-0.1.html
+      - text: "------------------"
+      - text: "Change log"
+        href: news/index.html
+    right:
+      - icon: fab fa-github
+        href: https://github.com/centerforassessment/packageSkeletonForR
+      - icon: fab fa-twitter
+        href: https://twitter.com/intent/tweet?url=https%3A%2F%2Fcenterforassessment.github.io%2FpackageSkeletonForR&via=dbetebenner&text=packageSkeletonForR%3A%20R%20package%20to%20convert%20cardinal%20to%20ordinal%20numbers&hashtags=packageSkeletonForR%2Crstats
+
+
+reference:
+      - title: Low level utility functions
+        desc: Basic functions for data manipulation and other low level tasks. 
+        contents:
+            - strHead
+            - strTail
+      - title: Higher level/statistical modelling functions
+        desc:  Nothing here yet, really. But I'll reference strHead anyway.
+        contents:
+            - strHead

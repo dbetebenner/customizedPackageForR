@@ -1,0 +1,41 @@
+---
+title: "Getting started with packageSkeletonForR"
+author: "Damian W Betebenner"
+date: "`r toOrdinal::toOrdinalDate()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with toOrdinal}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+---
+
+```{r include = FALSE}
+library(packageSkeletonForR)
+is_html_output = function() {
+  knitr::opts_knit$get("rmarkdown.pandoc.to")=="html"
+}
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "",
+    prompt=TRUE,
+    fig.dpi = 96
+			)
+if (is_html_output()) {
+    options(width=1000)
+}
+```
+
+# Introduction
+
+An introduction to the packageSkeletonForR here
+
+# Use
+
+How to use the repository 
+
+# Examples
+
+How to build your own package 
+
+# Contributions & Requests
+
