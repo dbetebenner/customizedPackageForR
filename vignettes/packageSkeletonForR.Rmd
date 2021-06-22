@@ -4,7 +4,7 @@ author: "Damian W Betebenner"
 date: "`r toOrdinal::toOrdinalDate()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Getting started with toOrdinal}
+  %\VignetteIndexEntry{Getting started with packageSkeletonForR}
   %\VignetteEngine{knitr::rmarkdown}
   %\usepackage[utf8]{inputenc}
 ---
@@ -25,6 +25,10 @@ if (is_html_output()) {
 }
 ```
 
+The **packageSkeletonForR** is both a [GitHub](www.github.com) version control repository, and associated GitHub hosted
+[static website](https://centerforassessment.github.io/packageSkeletonForR/articles/packageSkeletonForR.html) as well as an
+[R package](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Creating-R-packages). The combination of GitHub and R together is a
+*super-power* skill to develop if you have a serious interest in data analysis.
 
 The following steps are meant to help you get set up:
 
@@ -40,13 +44,22 @@ You'll need to have software installed and access to GitHub to make all of this 
   - **packagePages**: `devtools::install_github("centerforassessment/packagePages")`
   - **centerPackageTemplate**: `devtools::install_github("centerforassessment/centerPackageTemplate")`
 
+
 # Step 1: Clone the GitHub repository
 
 The contents of this repo need to be cloned to your local computer/device. This is done by cloning the repo. Don't fork the repo as you won't be
 contributing to this package skeleton (at least I don't expect you will --- however that's OK too) but instead will be using this as a starting point
 to create your own customzed R package/GitHub repo that will, ideally, be quite different.
 
-# Step 2: Have fun customizing the package
+
+# Step 2: Create a repo in your account for your package
+
+Go to your personal (or institutional) GitHub page, look for the `repositories` tab and click on the `new` button to start creating a new repo that
+will house the source code for your R package. Here's a screenshot from my initial setup:
+
+<img src="img/create_new_repo.png" alt="Create a new repo with your package name and description" style="width:80%;"/>
+
+# Step 3: Have fun customizing the package
 
 The **packageSkeletonForR** package is a super simple R package that contains just two functions for illustration purposes: `strHead` and `strTail`.
 These two functions take the first *n* characters of the head or tail of a character string (or a vector of character strings), respectively. They are
@@ -61,14 +74,17 @@ Some things you should do:
 * Add a vignette to the `vignettes` folder. Use the basic vignette (`packageSkeletonForR.Rmd`) in the folder as a starter.
 * Change the version number in `DESCRIPTION`, `inst/CITATION`, `man/packageSkeletonForR.Rmd` (last file should be named the package name you picked).
 
-# Step 3: Compile your package locally
 
-To make sure everything is working (be prepared to have some things not work) build your package locally. If you're using RStudio, there are functions to
-build the package embedded into the user interface.
+# Step 4: Compile your package locally
 
-# Step 4: Update your package website
+To make sure everything is working (be prepared to have some things not work) build your package locally. If you're using RStudio, there are capabilities to
+build the package embedded into the user interface. If you are using
 
-# Step 5: Push your package to GitHub and set up GitHub
+
+# Step 5: Update your package website
+
+
+# Step 6: Push your package to GitHub and set up GitHub
 
 You'll need to create a GitHub repo in your account for `myPackageName`.
 
@@ -78,8 +94,20 @@ GitHub is rapidly evolving into much more than a website to do version control. 
 * Process to build the package and test whether the build has any issues. The build processes on GitHub allow one to build against different OS platforms as well as against the current development version of R (which is required if you want to post to [CRAN](https://cran.r-project.org/)).
 
 Another huge benefit of using GitHub to build your package is that you can immediately share your package with others without necessarily posting the
-package to CRAN. In our work we have functional development versions of the package available via GitHub and periodically
-post a big release version on CRAN just to keep that up-to-date.
+package to CRAN. **packageSkeletonForR** is a functional R package and can be installed from GitHub just like any other R package via:
+
+```
+devtools::install_github("CenterForAssessment/packageSkeletonForR")
+```
+
+or
+
+```
+remotes::install_github("CenterForAssessment/packageSkeletonForR")
+```
+
+Once you get the package set up in your own repository, your package will be able to be installed similarly. In our work we have functional
+development versions of the package available via GitHub and periodically post a big release version on CRAN just to keep that up-to-date.
 
 
 # Contributions & Requests
