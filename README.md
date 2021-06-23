@@ -1,16 +1,16 @@
-packageSkeletonForR
+customizedPackageForR
 ===========
 
-[![R-CMD-check](https://github.com/CenterForAssessment/packageSkeletonForR/workflows/R-CMD-check/badge.svg)](https://github.com/CenterForAssessment/packageSkeletonForR/actions)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/centerforassessment/packageSkeletonForR?branch=master&svg=true)](https://ci.appveyor.com/project/centerforassessment/packageSkeletonForR)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/packageSkeletonForR)](http://cran.r-project.org/package=packageSkeletonForR)
-[![Development Version](https://img.shields.io/badge/devel-0.0--0.1-brightgreen.svg)](https://github.com/CenterForAssessment/packageSkeletonForR)
-[![License](http://img.shields.io/badge/license-GPL%203-brightgreen.svg?style=flat)](https://github.com/CenterForAssessment/packageSkeletonForR/blob/master/LICENSE.md)
+[![R-CMD-check](https://github.com/CenterForAssessment/customizedPackageForR/workflows/R-CMD-check/badge.svg)](https://github.com/CenterForAssessment/customizedPackageForR/actions)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/centerforassessment/customizedPackageForR?branch=master&svg=true)](https://ci.appveyor.com/project/centerforassessment/customizedPackageForR)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/customizedPackageForR)](http://cran.r-project.org/package=customizedPackageForR)
+[![Development Version](https://img.shields.io/badge/devel-0.0--0.1-brightgreen.svg)](https://github.com/CenterForAssessment/customizedPackageForR)
+[![License](http://img.shields.io/badge/license-GPL%203-brightgreen.svg?style=flat)](https://github.com/CenterForAssessment/customizedPackageForR/blob/master/LICENSE.md)
 
 
 # Overview
 
-The **packageSkeletonForR** [GitHub](www.github.com) repository (repo, for short) contains an [R](https://cran.r-project.org/) package skeleton
+The **customizedPackageForR** [GitHub](www.github.com) repository (repo, for short) contains an [R](https://cran.r-project.org/) package skeleton
 suitable for setting up a GitHub based R package with an associated GitHub static website. GitHub is an ideal environment for developing,
 maintaining, and distributing an R package. And it's SUPER cool too! 😀
 
@@ -29,4 +29,4 @@ There some minor prerequisite knowlege for doing this (which can be figured out 
    - Data sets that you commonly reference.
    - And don't be afraid to steal (with attribution, of course) stuff from other packages and put them into your package (with possible customizations). This is open source, you know!
 
-This [vignette](https://centerforassessment.github.io/packageSkeletonForR/articles/packageSkeletonForR.html) takes you through the steps necessary to use this package skeleton to set up your own repo/R package.
+This [vignette](https://centerforassessment.github.io/customizedPackageForR/articles/customizedPackageForR.html) takes you through the steps necessary to use this package skeleton to set up your own repo/R package.
